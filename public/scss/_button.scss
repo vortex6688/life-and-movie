@@ -1,0 +1,42 @@
+// Buttons
+
+.button {
+  padding: 0.25em 0.75em 0.25em;
+  border: none;
+
+  &.round {
+    border-radius: 0.5em;
+  }
+
+  &.success {
+    background: #198b56;
+
+    &:hover {
+      background: darken(#198b56, 15%);
+    }
+  }
+
+  &.orange {
+    background: #f1a503;
+
+    &:hover {
+      background: lighten(#f1a503, 15%);
+    }
+  }
+
+  &.green-juicy {
+    background: $green-juicy;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 24px;
+  }
+
+  @media (max-width: 640px) {
+    padding-bottom: 0;
+
+    h1, h2, h3, h4, h5, h6 {
+      padding: 0 0 0.4em 0;
+    }
+  }
+}

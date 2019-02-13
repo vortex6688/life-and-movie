@@ -1,0 +1,20 @@
+  <!-- nav -->
+<header class="">
+  <div class="nav-trigger" onclick="">
+    <img class="trigger-open" src="" />
+  </div>
+  <nav>
+    <a href="/" class="button"><h5 class="bold">Home</h5></a>
+    <a href="/posts" class="button"><h5 class="bold">The Blog</h5></a>
+    {{#unless user}}
+    <a href="/login" class="button"><h5 class="bold c-green-juicy">Log in</h5></a>
+    {{/unless}}
+  </nav>
+  {{#if user}}
+  <div class="flex">
+    <a href="/logout" class="button"><h5 class="bold c-green-juicy">Log out</h5></a>
+    <a href="/register" class="button"><h5 class="bold c-green-juicy">Register</h5></a>
+    <a href="/create" class="button green-juicy round"><h5 class="bold">Create a Post</h5></a>
+  </div>
+  {{/if}}
+</header>

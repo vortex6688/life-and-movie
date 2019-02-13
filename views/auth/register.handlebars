@@ -1,0 +1,25 @@
+<section class="centered w-75 mx-auto">
+  <h4 class="title c-green-juicy">Create New User</h4>
+  {{#if errors}}
+    {{#each errors}}
+      {{this}}<br/>
+    {{/each}}
+  {{/if}}
+  <form action="/register" method="post" class="flex column center w-75">
+    <div class="input-field flex column mx-auto my-1">
+      <label for="title">Enter Your User Name</label>
+      <input class="mt-1" type="text" value="{{#each data}}{{username}}{{/each}}" name="username">
+    </div>
+    <div class="input-field flex column mx-auto my-1">
+      <label for="title">Enter Your Email</label>
+      <input class="mt-1" type="email" value="{{#each data}}{{email}}{{/each}}" name="email">
+    </div>
+    <div class="input-field flex column mx-auto my-1">
+      <label for="title">Enter Your Password</label>
+      <input class="mt-1" type="password" name="password">
+    </div>
+    <button class="button round success mx-auto" type="submit">
+      <h5>Register</h5>
+    </button>
+  </form>
+</section>

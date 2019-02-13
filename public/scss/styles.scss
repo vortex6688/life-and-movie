@@ -1,0 +1,64 @@
+@import "reset";
+@import "variables";
+@import "base";
+@import "button";
+@import "form";
+@import "header";
+@import "footer";
+@import "utilities";
+@import "case-study";
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #1a1919;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+// content area
+section {
+  display: flex;
+  flex: 1 auto;
+  color: #fff;
+  max-width: 1600px;
+  padding: 0 1em;
+
+  &.centered {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &.center-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 1024px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0;
+  }
+}
+
+.main-banner {
+  margin: 1em 0;
+  max-width: 10em;
+}
+
+.headshot {
+  max-width: 10em;
+  border-radius: 50%;
+}
+
+.highlight {
+  color: #e2610a;
+}

@@ -1,0 +1,25 @@
+<section class="centered w-75 mx-auto">
+  <h5 class="page-title">Add A New Item</h5>
+  <form action="/create" method="post" encType="multipart/form-data" class="flex column center w-75">
+    <div class="input-field flex column mx-auto my-1 w-75">
+      <label for="title">Enter the title of the post</label>
+      <input class="mt-1" type="text" name="title">
+    </div>
+    <div class="input-field flex column mt-1">
+      {{#if error}}
+      <h6 class="item-exists-error red">{{error}}</h6>
+      {{/if}}
+    </div>
+    <div class="input-field flex column my-1">
+      <label for="content">Please enter the post content</label>
+      <textarea class="mt-1" rows="10" name="content"></textarea>
+    </div>
+    <div class="input-field flex column my-1">
+      <label for="content">Please upload your images</label>
+      <input class="mt-1" type="file" name="image">
+    </div>
+    <button class="button round success w-50 mx-auto" type="submit">
+      <h5>Save</h5>
+    </button>
+  </form>
+</section>

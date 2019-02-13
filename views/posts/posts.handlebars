@@ -1,0 +1,11 @@
+<section class="center-top mt-2 mx-auto">
+  <h2 class="title">The Blog</h2>
+  {{#each posts}}
+    <div><h4 class="title c-green-juicy mt-1">{{title}}</h4></div>
+    <div><p>{{content}}</p></div>
+    <a class="button mt-1" href="/posts/{{_id}}"><h5 class="c-orange">Read Entire Post...</h5></a>
+    <div class="my-1"><img style="max-width: 28em;" src="{{image}}" /></div>
+    <h5>Created on: {{moment creationDate format="MMM Do YYYY"}}</h5>
+    <hr class="w-100">
+  {{/each}}
+</section>

@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li:before,
+.li:before {
+  content: '✓';
+  padding-right: 0.5em;
+  color: #198b56;
+}
